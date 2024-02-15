@@ -88,7 +88,6 @@ import DomainThankYou from './domains/domain-thank-you';
 import EcommercePlanDetails from './ecommerce-plan-details';
 import FailedPurchaseDetails from './failed-purchase-details';
 import CheckoutThankYouFeaturesHeader from './features-header';
-import GoogleAppsDetails from './google-apps-details';
 import CheckoutThankYouHeader from './header';
 import JetpackPlanDetails from './jetpack-plan-details';
 import PersonalPlanDetails from './personal-plan-details';
@@ -1106,9 +1105,6 @@ function PurchaseDetailsWrapper(
 				selectedSite={ props.selectedSite }
 			/>
 		);
-	}
-	if ( purchases.some( isGSuiteOrExtraLicenseOrGoogleWorkspace ) ) {
-		return <GoogleAppsDetails purchases={ purchases } />;
 	}
 	if ( purchases.some( isDomainMapping ) ) {
 		return <DomainMappingDetails domain={ domain } isRootDomainWithUs={ isRootDomainWithUs } />;
