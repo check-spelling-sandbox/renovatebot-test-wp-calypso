@@ -21,9 +21,8 @@ export default function globalSiteSidebarMenu( {
 			type: 'menu-item',
 			url: `/sites`,
 		},
-
 		{
-			type: 'separator',
+			type: 'current-site',
 		},
 		{
 			icon: 'dashicons-admin-home',
