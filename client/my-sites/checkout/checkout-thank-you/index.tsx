@@ -1108,12 +1108,7 @@ function PurchaseDetailsWrapper(
 		);
 	}
 	if ( purchases.some( isGSuiteOrExtraLicenseOrGoogleWorkspace ) ) {
-		return (
-			<>
-				543
-				<GoogleAppsDetails purchases={ purchases } />
-			</>
-		);
+		return <GoogleAppsDetails purchases={ purchases } />;
 	}
 	if ( purchases.some( isDomainMapping ) ) {
 		return <DomainMappingDetails domain={ domain } isRootDomainWithUs={ isRootDomainWithUs } />;
