@@ -48,6 +48,7 @@ import {
 	domainManagementList,
 	domainManagementTransferInPrecheck,
 } from 'calypso/my-sites/domains/paths';
+import { GoogleWorkspaceSetUpThankYou } from 'calypso/my-sites/email/google-workspace-set-up-thank-you';
 import { getEmailManagementPath } from 'calypso/my-sites/email/paths';
 import TitanSetUpThankYou from 'calypso/my-sites/email/titan-set-up-thank-you';
 import { fetchAtomicTransfer } from 'calypso/state/atomic-transfer/actions';
@@ -610,6 +611,15 @@ export class CheckoutThankYou extends Component<
 				);
 			}
 
+			const gSuiteOrExtraLicenseOrGoogleWorkspace = purchases.find(
+				isGSuiteOrExtraLicenseOrGoogleWorkspace
+			);
+			if ( gSuiteOrExtraLicenseOrGoogleWorkspace ) {
+				pageContent = (
+					<GoogleWorkspaceSetUpThankYou purchase={ gSuiteOrExtraLicenseOrGoogleWorkspace } />
+				);
+			}
+
 			if ( pageContent ) {
 				const siteId = this.props.selectedSite?.ID;
 				const siteSlug = this.props.selectedSite?.slug;
@@ -1098,7 +1108,12 @@ function PurchaseDetailsWrapper(
 		);
 	}
 	if ( purchases.some( isGSuiteOrExtraLicenseOrGoogleWorkspace ) ) {
-		return <GoogleAppsDetails purchases={ purchases } />;
+		return (
+			<>
+				543
+				<GoogleAppsDetails purchases={ purchases } />
+			</>
+		);
 	}
 	if ( purchases.some( isDomainMapping ) ) {
 		return <DomainMappingDetails domain={ domain } isRootDomainWithUs={ isRootDomainWithUs } />;
