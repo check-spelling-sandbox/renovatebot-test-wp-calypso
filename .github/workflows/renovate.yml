@@ -44,7 +44,7 @@ concurrency:
 
 env:
   # Set as a workflow variable so that multiple jobs can use the value.
-  RENOVATE_VERSION: 36.31.0
+  RENOVATE_VERSION: ${{ vars.RENOVATE_VERSION || '36.31.0' }}
   cache_archive: renovate_cache.tar.gz
   # This is the dir renovate provides -- if we set our own, we run into permissions issues.
   cache_dir: /tmp/renovate/cache/renovate/repository
