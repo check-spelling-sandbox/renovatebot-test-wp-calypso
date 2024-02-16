@@ -93,7 +93,7 @@ jobs:
           renovate-version: ${{ env.RENOVATE_VERSION }}
         env:
           LOG_LEVEL: ${{ github.event.inputs.logLevel || 'debug' }}
-          RENOVATE_DRY_RUN: ${{ github.event.inputs.dryRun == 'no' && 'null' || github.event.inputs.dryRun || 'null' }}
+          RENOVATE_DRY_RUN: ${{ github.event.inputs.dryRun != 'no' && github.event.inputs.dryRun || '' }}
           RENOVATE_REPOSITORY_CACHE: ${{ github.event.inputs.repoCache || 'enabled' }}
 
       # If we don't compress it, the upload takes 100x longer. (Not a joke!)
