@@ -122,7 +122,7 @@
 	platform: 'github',
 	semanticCommits: 'enabled',
 	semanticCommitType: 'chore',
-	repositories: [ 'Automattic/wp-calypso' ],
+	repositories: [ 'check-spelling-sandbox/renovatebot-test-wp-calypso' ],
 
 	// --- Misc Settings ---
 	allowPlugins: true,
