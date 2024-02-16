@@ -32218,7 +32218,7 @@ __metadata:
     "@types/uuid": "npm:^9.0.7"
     "@types/validator": "npm:^13.7.1"
     "@types/webpack-env": "npm:^1.18.4"
-    "@types/wordpress__block-editor": "npm:^11.5.8"
+    "@types/wordpress__block-editor": "npm:^11.5.7"
     "@types/wordpress__blocks": "npm:^12.5.13"
     "@typescript-eslint/eslint-plugin": "npm:^6.20.0"
     "@typescript-eslint/parser": "npm:^6.20.0"
